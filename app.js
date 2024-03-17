@@ -33,7 +33,7 @@ for (let k = 1; k <= 100; k++) {
  and if n is 9, it should log 11.*/
 
     
- let n = 14;
+ let n = 4;
  let nextPrime = n;
  let foundPrime = false;
  let i = n + 1;
@@ -52,7 +52,7 @@ for (let k = 1; k <= 100; k++) {
    }
  }
  if (foundPrime) {
-   console.log(nextPrime);
+   console.log("The next prime number after " + n + " is " + nextPrime);
  }
  
      
