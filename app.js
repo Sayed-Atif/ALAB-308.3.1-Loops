@@ -1,4 +1,7 @@
+
+
 //ALAB 308.3.1: Practical Loops
+
 
 /*Part 1: Fizz Buzz
 - Loop through all numbers from 1 to 100.
@@ -6,6 +9,7 @@
 -If a number is divisible by 5, log “Buzz.”
 -If a number is divisible by both 3 and 5, log “Fizz Buzz.”
 -If a number is not divisible by either 3 or 5, log the number.*/
+
 
 for (let k = 1; k <= 100; k++) {
   if (k % 3 === 0 && k % 5 === 0) {
@@ -51,4 +55,36 @@ for (let k = 1; k <= 100; k++) {
    console.log(nextPrime);
  }
  
-        
+     
+ 
+// Part 3: Feeling Loopy
+/*The “\n” is an escaped Line Feed, which indicates that the following data should begin on a new line, as follows:
+ID,Name,Occupation,Age
+42,Bruce,Knight,41
+57,Bob,Fry Cook,19
+63,Blaine,Quiz Master,58
+98,Bill,Doctor’s Assistant,26
+
+Your task is to write a script that accomplishes the following:
+-Loop through the characters of a given CSV string.
+-Store each “cell” of data in a variable.
+-When you encounter a comma, move to the next cell.
+-When you encounter the “\r\n” sequence, move to the next “row.”
+-Log each row of data.
+*/
+
+//Using for loop:
+let csv = "ID,Name,Occupation,Age\r\n42,Bruce,Knight,41\r\n57,Bob,Fry Cook,19\r\n63,Blaine,Quiz Master,58\r\n98,Bill,Doctor’s Assistant,26";
+let rows = csv.split("\r\n");
+for(let m = 0; m < rows.length; m++){
+      let cells = rows[m].split(",");
+      console.log(cells[0], cells[1], cells[2], cells[3]);
+  }
+
+//Using while loop
+// let csv = "ID,Name,Occupation,Age\r\n42,Bruce,Knight,41\r\n57,Bob,Fry Cook,19\r\n63,Blaine,Quiz Master,58\r\n98,Bill,Doctor’s Assistant,26";
+// let rows = csv.split("\r\n");
+// while (rows.length > 0) {
+//   console.log(rows.shift());
+// }
+
